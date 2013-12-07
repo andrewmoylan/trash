@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# trash: move files to ~/recycle-bin instead of deleting 
+
+# subfolder under ~/recycle-bin of form yyyy/mm/dd/hh-mm-ss/
+timemark=`date +"%Y/%m/%d/%H-%M-%S"`
+recycleBin="$HOME/recycle-bin"
+localpath=`pwd`
+
+if [ ! -d $recycleBin ];then
+	echo "Warning: $recycleBin does not exist; creating it ..."
+	mkdir -p $recycleBin
+fi
+if [ $# -lt 1 ];then
+	echo "Usage: trash [files]"
+	exit
+fi
+
+dir="$recycleBin/$timemark"
+
+if [ ! -d $dir ];then
+	mkdir -p $dir
+fi
+
+echo "From:" > $dir/trash.log
+for i in $*;do
+	echo "$localpath/${i%%\/}" >> $dir/trash.log
+	mv ${i%%\/} $dir/
+done
+
+echo "To:" >> $dir/trash.log
+echo "$dir/" >> $dir/trash.log
+
+echo "Trashed to $dir."
