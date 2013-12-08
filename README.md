@@ -22,3 +22,5 @@ To use, put `trash` somewhere in `$PATH` (and `chmod u+x` it).
 Inspired by http://socwiki.wordpress.com/2011/06/11/rv-a-shell-script-to-make-a-recycled-bin-for-linux/.
 
 Test edit bug.
+
+Test edit bug.
