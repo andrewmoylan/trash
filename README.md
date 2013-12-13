@@ -1,7 +1,9 @@
 trash
 =====
 
-`trash [files]` moves files to time-stamped directories under `~/recycle-bin/`. Later you can `rm -rf` the old directories. Safer alternative to `rm [files]`.
+`trash [files]` moves files to time-stamped directories under `~/recycle-bin/`. Later you can `rm -rf` the old directories. Safer alternative to `rm -rf [files]`. Inspired by http://socwiki.wordpress.com/2011/06/11/rv-a-shell-script-to-make-a-recycled-bin-for-linux/.
+
+To use, put `trash` somewhere in `$PATH` (and `chmod u+x` it). Then:
 
 ```bash
 $ trash foo.txt
@@ -16,7 +18,3 @@ From:
 To:
 /home/Andrew/recycle-bin/2013/12/07/11-27-20/
 ```
-
-To use, put `trash` somewhere in `$PATH` (and `chmod u+x` it).
-
-Inspired by http://socwiki.wordpress.com/2011/06/11/rv-a-shell-script-to-make-a-recycled-bin-for-linux/.
