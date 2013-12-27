@@ -5,7 +5,14 @@ trash
 
 Inspired by http://socwiki.wordpress.com/2011/06/11/rv-a-shell-script-to-make-a-recycled-bin-for-linux/.
 
-To use, put `trash` somewhere in `$PATH` (and `chmod u+x` it). Then:
+To use, put `trash` somewhere in `$PATH` (and `chmod u+x` it). You can use the provided `install` script to make a symbolic link from `~/bin`:
+
+```bash
+$ ./install
+Linking /home/Andrew/projects/trash/trash to ~/bin/trash ...
+```
+
+Then use like this:
 
 ```bash
 $ trash foo.txt
