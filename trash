@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# trash: move files to ~/recycle-bin instead of deleting 
+# trash: move files to ~/recycle-bin instead of deleting
 
 # subfolder under ~/recycle-bin of form yyyy/mm/dd/hh-mm-ss/
 timemark=`date +"%Y/%m/%d/%H-%M-%S"`
