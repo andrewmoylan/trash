@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ ! -d ~/bin ];then
+	echo "Warning: ~/bin does not exist; creating it ..."
+	mkdir ~/bin
+fi
+
+baseDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+echo "Linking $baseDir/trash to ~/bin/trash ..."
+ln -s $baseDir/trash ~/bin/trash
