@@ -23,9 +23,9 @@ if [ ! -d $dir ];then
 fi
 
 echo "From:" > $dir/trash.log
-for i in $*;do
+for i in "$@"; do
 	echo "$localpath/${i%%\/}" >> $dir/trash.log
-	mv ${i%%\/} $dir/
+	mv "${i%%\/}" $dir/
 done
 
 echo "To:" >> $dir/trash.log
